@@ -44,7 +44,7 @@ class Hochladen extends StatelessWidget {
             child: FractionallySizedBox(
               heightFactor: 1,
               child: Text(
-                'Hallo, hier sollte nun ganz viel Platz sein',
+                'Hallo, hier sollte nun ganz viel Platz zum schreiben sein',
                 style: TextStyle(
                     fontSize: 15,
                     backgroundColor: Colors.lightBlue,
