@@ -54,7 +54,7 @@ class Suchen extends StatelessWidget {
                 height: 120,
                 child: Image(
                     image: AssetImage(
-                  'assets/images/Pfadischweiz.jpg',
+                  'assets/images/Pfadililie.png',
                 )),
               ),
             ],

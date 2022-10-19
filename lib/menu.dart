@@ -1,4 +1,6 @@
 // Menu Seite
+// ignore_for_file: prefer_const_constructors
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'einstellungen.dart';
@@ -39,7 +41,7 @@ class Menu extends StatelessWidget {
                 height: 120,
                 child: Image(
                     image: AssetImage(
-                  'assets/images/Pfadischweiz.jpg',
+                  'assets/images/Pfadililie.png',
                 )),
               ),
             ],
@@ -97,26 +99,6 @@ class Menu extends StatelessWidget {
                     'Einstellungen',
                     style: TextStyle(color: Colors.yellowAccent),
                   ),
-                ),
-              ),
-            ],
-          ),
-          Row(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-              SizedBox(
-                width: 100,
-                height: 50,
-                child: ElevatedButton.icon(
-                  style: ElevatedButton.styleFrom(
-                    minimumSize: const Size.fromHeight(50),
-                  ),
-                  icon: const Icon(Icons.arrow_back, size: 32),
-                  label: const Text(
-                    'Ausloggen',
-                    style: TextStyle(fontSize: 24),
-                  ),
-                  onPressed: () => FirebaseAuth.instance.signOut(),
                 ),
               ),
             ],

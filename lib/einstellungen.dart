@@ -1,4 +1,5 @@
 // Einstellungen Seite
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'menu.dart';
 
@@ -35,10 +36,25 @@ class Einstellungen extends StatelessWidget {
                 height: 120,
                 child: Image(
                     image: AssetImage(
-                  'assets/images/Pfadischweiz.jpg',
+                  'assets/images/Pfadililie.png',
                 )),
               ),
             ],
+          ),
+          SizedBox(
+            width: 300,
+            height: 50,
+            child: ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                minimumSize: const Size.fromHeight(50),
+              ),
+            icon: const Icon(Icons.arrow_back, size: 32),
+            label: const Text(
+              'Ausloggen',
+               style: TextStyle(fontSize: 24),
+            ),
+            onPressed: () => FirebaseAuth.instance.signOut(),
+            ),
           ),
         ],
       ),

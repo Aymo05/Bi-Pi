@@ -1,4 +1,6 @@
 // Home Seite
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors, duplicate_ignore
+
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 
@@ -13,7 +15,7 @@ class Home extends StatelessWidget {
   Widget build(BuildContext context) {
     final user = FirebaseAuth.instance.currentUser!;
     return Scaffold(
-      backgroundColor: const Color.fromRGBO(0, 191, 255, 100),
+      backgroundColor: const Color.fromRGBO(139, 34, 82, 100),
       body: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -36,71 +38,47 @@ class Home extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 8,
-                child: Text(
-                  'Eingeloggt als',
-                  style: TextStyle(fontSize: 16),
-                ),
-              ),
-              const SizedBox(
-                height: 8,
-              ),
-              SizedBox(
-                height: 8,
-                child: Text(
-                  user.email!,
-                  style: const TextStyle(fontSize: 16),
-                ),
-              ),
-              const SizedBox(
                 width: 100,
                 height: 120,
                 child: Image(
                     image: AssetImage(
-                  'assets/images/Pfadischweiz.jpg',
-                )),
+                  'assets/images/Pfadililie.png',
+                  ),
+                ),
               ),
             ],
-          ),
-          const Flexible(
-            child: FractionallySizedBox(
-              widthFactor: 1,
-              child: Text(
-                'Willkommen bei Bi-Pi. Hier kannst du deine Übungen von der Pfadi, sei es vom Sommerlager oder von einem Samstagnachmittag hochladen und mit anderen Pfadis teilen.',
-                style: TextStyle(color: Colors.yellowAccent, fontSize: 17),
-              ),
-            ),
-          ),
-          const Flexible(
-            child: FractionallySizedBox(
-              widthFactor: 1,
-              heightFactor: 1,
-              child: Text('                  '),
-            ),
-          ),
-          const SizedBox(
-            height: 80,
-            child: Text('          '),
           ),
           Row(
-            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-            // ignore: prefer_const_literals_to_create_immutables
+            mainAxisAlignment: MainAxisAlignment.end,
             children: [
-              const FractionallySizedBox(
-                widthFactor: 0.4,
-                child: Image(
-                    image: AssetImage(
-                  'assets/images/Geländegame.jpg',
-                )),
+              const SizedBox(
+                height: 20,
+                child: Text(
+                  'Eingeloggt als:',
+                  style: TextStyle(color: Colors.black, fontSize: 16),
+                ),
               ),
-              const FractionallySizedBox(
-                widthFactor: 0.4,
-                child: Image(
-                    image: AssetImage(
-                  'assets/images/Geländegame2.jpg',
-                )),
+              const SizedBox(
+                height: 20,
+                width: 5,
+              ),
+              SizedBox(
+                height: 20,
+                child: Text(
+                  user.email!,
+                  style: const TextStyle(color: Colors.black, fontSize: 16),
+                ),
               ),
             ],
+          ),
+              Flexible(
+                child: FractionallySizedBox(
+                  widthFactor: 1,
+                  child: Text(
+                    'Willkommen bei Bi-Pi. Hier kannst du deine Übungen von der Pfadi, sei es vom Sommerlager oder von einem Samstagnachmittag hochladen und mit anderen Pfadis teilen.',
+                    style: TextStyle(color: Colors.yellowAccent, fontSize: 17),
+                  ),
+                ),
           ),
         ],
       ),
